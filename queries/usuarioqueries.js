@@ -60,7 +60,7 @@ const actualizar = async (id, nombre) => {
         );
         return resultado.rows[0];
     } catch (error) {
-        console.error('❌ Error al actualizar usuario:', error.message);
+        console.error(' Error al actualizar usuario:', error.message);
         throw error;
     }
 };
@@ -71,9 +71,9 @@ const actualizar = async (id, nombre) => {
 const eliminar = async (id) => {
     try {
         await pool.query('DELETE FROM usuarios WHERE id = $1', [id]);
-        console.log(`🗑️ Usuario ${id} eliminado`);
+        console.log(` Usuario ${id} eliminado`);
     } catch (error) {
-        console.error('❌ Error al eliminar usuario:', error.message);
+        console.error(' Error al eliminar usuario:', error.message);
         throw error;
     }
 };
